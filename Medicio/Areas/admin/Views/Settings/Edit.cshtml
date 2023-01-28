@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Setting
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="NameOfDoctorsSection">Name</label>
+        <input class="form-control" asp-for="NameOfDoctorsSection" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label asp-for="TitleOfDoctorsSection">Title</label>
+        <input class="form-control" asp-for="TitleOfDoctorsSection" placeholder="title">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+

@@ -1,0 +1,49 @@
+﻿@using Medicio.ViewModels
+
+@{
+    ViewData["Title"] = "Login";
+}
+@model LoginVM
+
+<section class="vh-100" >
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100" style="margin:200px">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                     class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form method="post">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <span asp-validation-for="Username"></span>
+                        <input asp-for="Username" class="form-control form-control-lg"
+                               placeholder="Enter a valid email address" />
+                        <label class="form-label" asp-for="Username"></label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <span asp-validation-for="Password"></span>
+                        <input asp-for="Password" class="form-control form-control-lg"
+                               placeholder="Enter password" />
+                        <label class="form-label" asp-for="Password"></label>
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                            Login
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+   
+</section>
+
+<script src="~/assets/js/jquery-validate/jquery.validate.js"></script>
+<script src="~/assets/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
